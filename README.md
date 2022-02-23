@@ -13,6 +13,12 @@ grafana/provisioning
 sudo chown 472:472 grafana/provisioning
 ```
 
+First you need to create grafana_default network in docker:
+
+```
+docker network create grafana_default
+```
+
 Run following command in this directory: 
 
 ```
