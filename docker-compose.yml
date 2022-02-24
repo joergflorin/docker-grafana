@@ -13,8 +13,6 @@ services:
       - GF_PATHS_PROVISIONING=/etc/grafana/provisioning
     hostname: grafana
     image: grafana/grafana:latest
-    networks:
-      - grafana_default
     ports:
       - 3000:3000
     restart: unless-stopped
@@ -25,5 +23,6 @@ services:
       - ./grafana/provisioning:/etc/grafana/provisioning
 
 networks:
-  grafana_default:
-    external: true
+  default:
+    name: monitoring
+    driver: bridge
