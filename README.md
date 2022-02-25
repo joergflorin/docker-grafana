@@ -1,4 +1,4 @@
-# grafana
+# docker-grafana
 
 Docker service definitions for Grafana server.
 
