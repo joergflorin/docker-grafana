@@ -11,6 +11,7 @@ services:
       - GF_PATHS_LOGS=/var/log/grafana
       - GF_PATHS_PLUGINS=/var/lib/grafana/plugins
       - GF_PATHS_PROVISIONING=/etc/grafana/provisioning
+      - TZ=Europe/Berlin
     hostname: grafana
     image: grafana/grafana:8.4.6
     ports:
