@@ -11,6 +11,9 @@ services:
       GF_PATHS_LOGS: /var/log/grafana
       GF_PATHS_PLUGINS: /var/lib/grafana/plugins
       GF_PATHS_PROVISIONING: /etc/grafana/provisioning
+      GF_AUTH_ANONYMOUS_ENABLED: "true"
+      GF_AUTH_ANONYMOUS_ORG_ROLE: Viewer
+      GF_AUTH_ANONYMOUS_ORG_NAME: ${ORG_NAME}
       TZ: Europe/Berlin
     hostname: grafana
     image: grafana/grafana:8.4.6
